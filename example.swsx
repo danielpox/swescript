@@ -1,0 +1,41 @@
+importera React, { useState } från 'react'
+
+importera * som firebase från 'firebase/app'
+
+exportera konstant vyer = {
+  meeting: 'MEETING',
+  other: 'OTHER'
+}
+
+funktion MinKomponent () {
+  konstant [vy, sättVy] = useState(vyer.meeting)
+
+  returnera (
+    <React.Fragment>
+      <Header />
+      { vy === vyer.meeting
+	? <Meeting />
+	: <OtherView />
+      }
+      <div>Min komponent!</div>
+    </React.Fragment>
+  )
+}
+
+exportera standard MinKomponent
+
+konstant esp = require('esprima')
+
+låt speed = 22;
+
+om (speed > 25) {
+  kasta sant;
+} annars om (speed < 10) {
+  kasta falskt;
+} annars {
+  console.log('ingen aning')
+}
+
+funktion minApparat (input) {
+  returnera input + ' apparat';
+}
