@@ -14,8 +14,8 @@ funktion MinKomponent () {
     <React.Fragment>
       <Header />
       { vy === vyer.meeting
-	? <Meeting />
-	: <OtherView />
+        ? <Meeting />
+        : <OtherView />
       }
       <div>Min komponent!</div>
     </React.Fragment>

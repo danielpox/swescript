@@ -1,6 +1,6 @@
-import esprima from 'esprima'
-import escodegen from 'escodegen'
-import fs from 'fs'
+const esprima = require('esprima')
+const escodegen = require('escodegen')
+const fs = require('fs')
 
 const program = fs.readFileSync('example.swsx').toString()
 let source = program
@@ -12,10 +12,10 @@ const parsed = esprima.parseModule(program, { jsx: true, tokens: true, range: tr
     console.log(node.specifiers[1])*/
 })
 
-console.log(parsed.tokens)
+//console.log(parsed.tokens)
 
-/*const gen = escodegen.generate(parsed)
+const gen = escodegen.generate(parsed)
 
-console.log(gen)*/
+console.log(gen)
 
-//fs.writeFileSync('output.jsx', formatted)
+fs.writeFileSync('output.jsx', gen)
